@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.3.2)
+project(lab1-optimised)
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+set(CMAKE_CC_COMPILER "/usr/bin/gcc")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pg")
+add_executable(lab1-optimised ../main.cpp)
+add_library(BinTree-stripped ../src/optimised/BinTreeStriped.cpp)
+target_link_libraries(lab1-optimised BinTree-stripped)
+target_link_libraries(lab1-optimised BinTree-optimised)
+

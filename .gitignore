@@ -1,0 +1,6 @@
+/build
+*.doc
+lab1-main
+input.txt
+lab1-analysis.txt
+*.out

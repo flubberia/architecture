@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.3.2)
+project(lab1)
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+set(CMAKE_CC_COMPILER "/usr/bin/gcc")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pg")
+#add_subdirectory(test build/test)
+add_executable(lab1-main main.cpp)
+add_library(BinTree src/BinTree.cpp)
+target_link_libraries(lab1-main BinTree)
+add_executable(lab1-main-optimised main.cpp)
+target_link_libraries(lab1-main-optimised BinTree)
+
